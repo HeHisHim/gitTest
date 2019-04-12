@@ -39,8 +39,11 @@ scp static_web.conf root@95.179.184.41:/etc/nginx/conf.d
 
 /usr/share/nginx/html
 
-开启80端口 firewall-cmd --zone=public(作用域) --add-port=80/tcp(端口和访问类型) --permanent(永久生效)
-删除 firewall-cmd --zone= public --remove-port=80/tcp --permanent
+查看端口开启情况 netstat -tlunp
+
+开启80端口 firewall-cmd --zone=public --add-port=8088/tcp --permanent
+重启 firewall-cmd --reload
+删除 firewall-cmd --zone=public --remove-port=3306/tcp --permanent
 
 
 cp 50x.html /root/www/static-web/
