@@ -41,6 +41,9 @@ scp static_web.conf root@95.179.184.41:/etc/nginx/conf.d
 
 查看端口开启情况 netstat -tlunp
 
+查看所有开启的端口
+firewall-cmd --list-ports  
+
 开启80端口 firewall-cmd --zone=public --add-port=8088/tcp --permanent
 重启 firewall-cmd --reload
 删除 firewall-cmd --zone=public --remove-port=3306/tcp --permanent
