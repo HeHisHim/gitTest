@@ -8,11 +8,13 @@ firewall-cmd --state 查看防火墙状态
 systemctl start firewalld.service
 systemctl stop firewalld.service
 
-停止
-nginx -s stop
-启动
-cd sbin
-./nginx
+nginx 启动 停止 重启
+service nginx start
+service nginx stop
+service nginx restart
+
+打印nginx access.log里面ip的访问次数
+awk '{print $1}' access.log |sort |uniq -c|sort -n
 
 
 /root/www/static-web
