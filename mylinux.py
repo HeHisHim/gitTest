@@ -48,7 +48,7 @@ firewall-cmd --list-ports
 
 开启80端口 firewall-cmd --zone=public --add-port=8088/tcp --permanent
 重启 firewall-cmd --reload
-删除 firewall-cmd --zone=public --remove-port=3306/tcp --permanent
+删除 firewall-cmd --zone=public --remove-port=9000/tcp --permanent
 
 
 cp 50x.html /root/www/static-web/
